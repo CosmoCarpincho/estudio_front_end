@@ -1,0 +1,20 @@
+.container {
+  width: 70%;
+  height: 3000px;
+  margin: 0 auto;
+  position: relative;
+}
+.div-1 {
+  height: 200px;
+  width: 100px;
+  background-color: antiquewhite;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.div-2 {
+  height: 200px;
+  width: 100px;
+  background-color: aquamarine;
+}
