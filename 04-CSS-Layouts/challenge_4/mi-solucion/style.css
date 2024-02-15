@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -136,4 +137,47 @@ body {
 .add-cart:hover {
   background-color: white;
   color: #000;
+}
+
+/* FLOATS */
+
+.img-container {
+  float: left;
+  display: block;
+  margin-right: 40px;
+}
+
+.center-container {
+  float: left;
+  width: 258px;
+  margin-right: 40px;
+../../00-assets/challenge-chuck-taylor/img/challenges.jpg
+
+.details-container {
+  float: right;
+  width: 258px;
+  margin-right: 20px;
+}
+
+.price {
+  float: left;
+}
+
+.shipping {
+  float: right;
+  margin-top: 10px;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.price-shipping-container {
+  margin-top: 20px;
+}
+
+.colors-blocks {
+  margin-top: 60px;
 }
