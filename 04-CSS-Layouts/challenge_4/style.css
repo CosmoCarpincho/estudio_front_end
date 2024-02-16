@@ -1,11 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: sans-serif;
   line-height: 1.4;
+}
+
+.product-img {
+  float: left;
+  margin-right: 40px;
 }
 
 /* PRODUCT */
@@ -25,8 +31,15 @@ body {
 }
 
 /* PRODUCT INFORMATION */
+.product-info {
+  float: left;
+  width: 243px;
+  margin-right: 40px;
+}
+
 .price {
   font-size: 24px;
+  float: left;
 }
 
 .shipping {
@@ -35,6 +48,7 @@ body {
   font-weight: bold;
   color: #777;
   margin-bottom: 20px;
+  float: right;
 }
 
 .sale {
@@ -52,6 +66,10 @@ body {
 
   /*   width: 40px;
   text-align: center; */
+}
+
+.product-description {
+  clear: both;
 }
 
 .more-info:link,
@@ -91,6 +109,11 @@ body {
 }
 
 /* PRODUCT DETAILS */
+.product-details {
+  /* (825 - 8 - 250 - 80)/2 = 243.5   el 80 es porque quiere un margin de 40 entre elementos*/
+  width: 243px;
+  float: left;
+}
 .details-title {
   text-transform: uppercase;
   font-size: 16px;
