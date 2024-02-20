@@ -177,7 +177,7 @@ nav a:link {
   padding: 20px;
   display: block; */
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
 
@@ -221,7 +221,7 @@ header h2::after {
 }
 
 /* FLOATS */
-.author-img {
+/* .author-img {
   float: left;
   margin-bottom: 20px;
 }
@@ -262,4 +262,27 @@ aside {
 
 footer {
   clear: both;
+} */
+
+/* FLEXBOX */
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.container-main {
+  display: flex;
 }
