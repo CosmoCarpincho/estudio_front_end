@@ -16,17 +16,34 @@
         <form class="survey-form" action="">
           <fieldset>
             <label for="name"
-              >Name <input type="text" id="name" name="name"
+              >Name
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
             /></label>
             <label for="email"
-              >Email <input type="text" id="email" name="email"
+              >Email
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
             /></label>
             <label for="age"
-              >Age (optional) <input type="text" id="age" name="age"
+              >Age (optional)
+              <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Age"
+                min="10"
+                max="99"
             /></label>
             <label for="role"
               >Which option best describes your current role?
-              <select name="role">
+              <select id="role" name="role">
                 <option value="">Select current role</option>
                 <option value="student">Student</option>
                 <option value="full-time-job">Full time Job</option>
@@ -36,7 +53,141 @@
               </select>
             </label>
           </fieldset>
-          <fieldset></fieldset>
+          <fieldset>
+            <p>Which you recommend freeCodeCamp to a friend?</p>
+            <label for="definitely" class="label-radio"
+              ><input
+                class="radio"
+                type="radio"
+                id="definitely"
+                name="recommend"
+                value="definitely"
+              />
+              Definitely</label
+            >
+            <label for="maybe" class="label-radio"
+              ><input
+                class="radio"
+                type="radio"
+                id="maybe"
+                name="recommend"
+                value="maybe"
+              />
+              Maybe</label
+            >
+            <label for="not-sure" class="label-radio"
+              ><input
+                class="radio"
+                type="radio"
+                id="not-sure"
+                name="recommend"
+                value="not-sure"
+              />Not sure</label
+            >
+            <p class="p-checkbox">
+              What would you like to see improved? (Check all that apply)
+            </p>
+            <label for="front-end" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="front-end"
+                name="like"
+              />
+              Front-end Projects</label
+            >
+            <label for="back-end" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="back-end"
+                name="like"
+              />
+              Back-end Projects</label
+            >
+            <label for="data-visualization" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="data-visualization"
+                name="like"
+              />
+              Data Visualization</label
+            >
+            <label for="challenges" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="challenges"
+                name="like"
+              />
+              Challenges</label
+            >
+
+            <label for="open-source" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="open-source"
+                name="like"
+              />
+              Open Source Community</label
+            >
+
+            <label for="gitter-help-rooms" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="gitter-help-rooms"
+                name="like"
+              />
+              Gitter help rooms</label
+            >
+            <label for="videos" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="videos"
+                name="like"
+              />
+              Videos</label
+            >
+            <label for="city-meetups" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="city-meetups"
+                name="like"
+              />
+              City Meetups</label
+            >
+            <label for="wiki" class="label-checkbox"
+              ><input class="checkbox" type="checkbox" id="wiki" name="like" />
+              Wiki</label
+            >
+            <label for="forum" class="label-checkbox"
+              ><input class="checkbox" type="checkbox" id="forum" name="like" />
+              Forum</label
+            >
+            <label for="additional-courses" class="label-checkbox"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                id="additional-courses"
+                name="like"
+              />
+              Additional Courses</label
+            >
+
+            <p class="label-comments">Any comments or suggestions?</p>
+            <textarea
+              name="comments"
+              id="comments"
+              placeholder="Enter yout comment here..."
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </fieldset>
         </form>
       </main>
     </div>
