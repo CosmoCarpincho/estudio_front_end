@@ -1,0 +1,180 @@
+<!-- Esta versión es viendo la imagen. Antes de ver como se hace en el vídeo -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Component</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+    /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+    /*
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: #343a40;
+      line-height: 1;
+    }
+
+    .carousel {
+      width: 1000px;
+      margin: 100px auto;
+    }
+
+    .background {
+      position: relative;
+      background-color: #087f5b;
+      /* height: 300px; */
+      border-radius: 15px;
+      /* z-index: 0; */
+      padding: 0 16px;
+    }
+
+    .background::before,
+    .background::after {
+      top: calc(50% - 25px);
+      content: url(./icons/flecha-verde.svg);
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      background-color: rgb(241, 246, 249);
+      border-radius: 9in;
+      position: absolute;
+    }
+
+    .background::after {
+      left: -35px;
+      transform: rotate(90deg) scale(0.6);
+      box-shadow: 10px 0 32px 0 rgb(0, 0, 0, 0.3);
+    }
+
+    .background::before {
+      right: -32px;
+      transform: rotate(270deg) scale(0.6);
+      box-shadow: -10px 0 32px 0 rgb(0, 0, 0, 0.3);
+    }
+
+    .item {
+      /* z-index: 1; */
+      display: flex;
+      justify-content: space-around;
+      gap: 40px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      margin: 0 20px;
+      align-items: center;
+    }
+
+    .content-img {
+      position: relative;
+      display: block;
+    }
+
+    .image {
+      width: 350px;
+      height: 350px;
+      display: inline-block;
+      border-radius: 15px;
+      position: absolute;
+      top: calc((-350px + 100%) / 2);
+      box-shadow: 0 0 45px 0 rgb(0, 0, 0, 0.3);
+    }
+
+    .image-fix {
+      width: 350px;
+      height: 300px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      color: rgb(241, 241, 241);
+      gap: 10px;
+      justify-content: space-between;
+      margin: 30px 20px;
+
+      /* width: 450px; */
+      /* height: 250px; */
+    }
+
+    .comment {
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+    .name {
+      margin: 50px 0 5px 0;
+      color: rgb(231, 231, 231);
+    }
+    .description {
+      color: rgb(231, 231, 231);
+    }
+
+    .navigation-carousel {
+      display: flex;
+      position: absolute;
+      margin: 20px 0;
+      gap: 15px;
+      left: calc((100% - 150px) / 2);
+    }
+
+    .point {
+      width: 15px;
+      height: 15px;
+      border-radius: 80px;
+      background-color: white;
+      border: 2px solid #087f5b;
+    }
+    .select-point {
+      background-color: #087f5b;
+    }
+  </style>
+  <body>
+    <div class="carousel">
+      <div class="background">
+        <div class="item">
+          <div class="content-img">
+            <img class="image" src="./maria.jpg" />
+            <div class="image-fix"></div>
+          </div>
+          <div class="text">
+            <p class="comment">
+              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
+              veniam molestiae eum nobis tempore corporis aut est modi nam! Odio
+              porro magnam veritatis quidem suscipit recusandae tempore quas
+              itaque inventore!"
+            </p>
+            <div>
+              <p class="name">Maria de Almeida</p>
+              <p class="description">Senior Product Manager at EDP Comercial</p>
+            </div>
+            <div />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-carousel">
+      <div class="point select-point"></div>
+      <div class="point"></div>
+      <div class="point"></div>
+      <div class="point"></div>
+    </div>
+  </body>
+</html>

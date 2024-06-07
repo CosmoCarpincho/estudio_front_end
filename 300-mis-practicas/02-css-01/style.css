@@ -1,0 +1,76 @@
+.practica {
+  box-shadow: none;
+  box-shadow: red 60px -16px;
+  box-shadow: 10px 5px 5px black;
+}
+
+/* box-shadow: x y blur spread color |inset|initia|inherit; */
+/* si no se agrega color toma la property color del elemento */
+
+body {
+  background-color: rgb(45, 45, 95);
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  /* gap: 50px; */
+  margin: 20px auto;
+  justify-content: space-around;
+}
+
+.con-shadow {
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite;
+  color: rgb(135, 177, 163);
+  box-shadow: 0 0px 0 20px inset;
+  border-radius: 100px;
+  /* display: inline-block; */
+}
+
+.aro {
+  width: 100px;
+  height: 100px;
+  border-radius: 9in;
+  font-size: 100px;
+  position: relative;
+}
+
+.circulo-grande {
+  background-color: rgb(90, 147, 26);
+  width: 1em;
+  height: 1em;
+  border-radius: inherit;
+  position: absolute;
+}
+
+.circulo-chico {
+  background-color: darkcyan;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: inherit;
+  z-index: 2;
+  margin: 0.2em;
+  position: absolute;
+}
+
+.aro-con-after {
+  font-size: 100px; /* size */
+  width: 1em;
+  height: 1em;
+  background-color: rgb(231, 169, 55);
+  border-radius: 9in;
+}
+
+.aro-con-after::after {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  background-color: rgb(243, 77, 44);
+  display: inline-block;
+  border-radius: inherit;
+  margin: 0.2em;
+}
