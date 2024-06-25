@@ -1,0 +1,110 @@
+<div class="vertical-1">
+  <div class="d d1"></div>
+  <div class="d d2"></div>
+</div>
+<div>
+  <div class="d d3"></div>
+  <div class="d d4"></div>
+</div>
+
+<div>
+  <div class="d d5"></div>
+  <div class="d d6"></div>
+</div>
+
+<div class="vertical-2">
+  <div class="d d7"></div>
+  <div class="d d8"></div>
+</div>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 150px 150px;
+    background-color: #edaf38;
+    position: relative;
+  }
+
+  div {
+  }
+
+  .d {
+    width: 30px;
+    height: 140px;
+    background: #ffffcd;
+  }
+
+  .d1 {
+    background-color: pink;
+  }
+
+  .d2 {
+    background-color: red;
+  }
+
+  .d3 {
+    background-color: green;
+    width: 240px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+  }
+
+  .d4 {
+    background-color: blue;
+    width: 240px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+  }
+
+  .d5 {
+    background-color: brown;
+    width: 240px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .d6 {
+    background-color: brown;
+    width: 240px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+  }
+
+  .d7 {
+    background-color: orangered;
+  }
+
+  .d8 {
+    background-color: blueviolet;
+  }
+
+  .vertical-1 {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+  }
+
+  .vertical-2 {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .d {
+    background-color: #ffffcd;
+  }
+</style>
