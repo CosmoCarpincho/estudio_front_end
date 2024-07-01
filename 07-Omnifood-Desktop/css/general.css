@@ -6,7 +6,7 @@
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 - Font weights:
-Defualt: 400
+Default: 400
 Medium: 500
 Semi-bold: 600
 Bold: 700
@@ -39,8 +39,8 @@ Paragraph default: 1.6
 
 --- 06 BORDER-RADIUS
 
-Defual: 9px
-Mediun: 11px
+Default: 9px
+Medium: 11px
 
 Default: 9px
 
@@ -61,6 +61,9 @@ SPACING SYSTEM (px)
 }
 
 html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
 }
 
@@ -75,7 +78,7 @@ body {
 /* GENERAL COMPONENTS */
 /*****************************/
 .container {
-  /* 1140 */
+  /* 1140px */
   max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
@@ -139,6 +142,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -149,7 +153,8 @@ body {
   border-radius: 9px;
 
   /* Put transition on original "state" */
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -179,8 +184,14 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
 .margin-right-sm {
-  margin: 1.6rem !important;
+  margin-right: 1.6rem !important;
 }
 
 strong {
