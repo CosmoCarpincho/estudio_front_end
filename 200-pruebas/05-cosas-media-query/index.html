@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      @import url();
+      :root {
+        --container-width: 500px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100svw;
+        height: 100svh;
+        background-color: rgb(190, 125, 190);
+      }
+
+      .container {
+        background-color: brown;
+      }
+
+      .item {
+        &.i1 {
+          background-color: blueviolet;
+        }
+
+        @media screen and (max-width: 700px) and (min-width: 300px) {
+          &.i1 {
+            background-color: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">1</div>
+      <div class="item i2">2</div>
+      <div class="item i3">3</div>
+      <div class="item i4">4</div>
+      <div class="item i5">5</div>
+    </div>
+  </body>
+</html>
