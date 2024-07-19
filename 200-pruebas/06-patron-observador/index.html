@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patron observador</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .info {
+        color: whitesmoke;
+        height: 200px;
+        width: 400px;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info"></div>
+  </body>
+  <script defer>
+    const infoEl = document.querySelector(".info");
+    console.log(infoEl);
+
+    infoEl.textContent = "Hola";
+
+    class Subject {
+      constructor() {
+        this.observers = [];
+      }
+      addObserver(observer) {
+        this.observers.push(observer);
+      }
+
+      removeObserver(observer) {
+        this.observers = this.observers.filter((obs) => obs !== observer);
+      }
+
+      notifyObservers(message) {
+        this.observers.forEach((observer) => observer.update(message));
+      }
+    }
+
+    class Observer {
+      update(message) {
+        console.log(`Observer received: ${message}`);
+      }
+    }
+
+    console.log("hola");
+
+    // Crear un sujeto
+    const subject = new Subject();
+
+    // Crear observadores
+    const observer1 = new Observer();
+    const observer2 = new Observer();
+
+    // Añadir observadores al sujeto
+    subject.addObserver(observer1);
+    subject.addObserver(observer2);
+
+    // Notificar a los observadores
+    subject.notifyObservers("Hello Observers!");
+  </script>
+</html>
