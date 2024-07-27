@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --radio: 10px;
+  --padding: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(230, 230, 230);
+  padding: var(--padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* line-height: 1.5; */
+}
+
+.component {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 600px;
+  height: 350px;
+  color: rgb(230, 230, 230);
+}
+
+.component_big {
+  background-color: rgb(240, 240, 240);
+  grid-column: 1 / -1;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--padding);
+  border-top-left-radius: var(--radio);
+  border-top-right-radius: var(--radio);
+  font-weight: 300;
+}
+
+.component_big span {
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.component_big h1 {
+  color: rgb(71, 201, 169);
+}
+
+.component_small_left {
+  background-color: rgb(71, 201, 169);
+  padding: var(--padding);
+  border-bottom-left-radius: var(--radio);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.component_small_left div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.component_small_left strong {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.component_small_left p:nth-child(2) {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.component_small_left p:nth-child(3) {
+  font-weight: 300;
+  /* opacity: 0.8; */
+  margin-bottom: 16px;
+}
+
+.component_small_left button {
+  height: 40px;
+  width: 140px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgb(71, 201, 169);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: rgb(240, 240, 240);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.component_small_left button:hover {
+  background-color: rgb(240, 240, 240);
+  color: rgb(71, 201, 169);
+}
+
+.component_small_right {
+  background-color: rgb(77, 216, 181);
+  padding: var(--padding);
+  border-bottom-right-radius: var(--radio);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.component_small_right h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.component_small_right {
+  font-weight: 300;
+}
+
+/*El proposito de este ejercicio es lograr el mayor parecido posible con la solución utilizando, Grid y Flex.
+Colores:
+Blanco oscuro: rgb(230,230,230);
+Blanco claro: rgb(240,240,240);
+Verde agua oscuro: rgb(71, 201, 169);
+Verde agua claro: rgb(77, 216, 181);
+
+ACLARACIÓN: No se debe agregar mas HTML, ni tampoco utilizar más colores que los mencionados arriba.
+*/

@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*El contenedor ocupa el total de la pantalla*/
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 16px;
+  background-color: whitesmoke;
+}
+
+/*El navegador ocupa hasta 1280 pixeles de ancho, sus elementos centrados verticalmente
+y separados de punta a punta. Además, centrado en su padre "container"*/
+.navigator {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.navigator > h1 {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+/*Esta clase solo cumple la funcion de ser el punto de relatividad del resto del menu*/
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+/*El primer hijo elemento <li> del dropdown "Clickeame"*/
+.dropdown > li:first-child {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid black;
+}
+
+/*El input que nos permite cambiar la escala del menu, ocupa el 100% tanto alto como ancho
+de su padre relativo, osea ".dropdown". La opacidad nos permite que el usuario no lo vea.*/
+.dropdown > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/*Cuando el input posea la propiedad :checked este afectara al menu, dandole escala a 1.*/
+.dropdown > input:checked + .dropdown_menu {
+  transform: scale(1);
+}
+
+/*Este es el contenedor del menu desplegable. Hacemos que se posicione un 100% debajo del padre relativo.
+Tambien le asignamos un ancho del 100% de su padre.*/
+.dropdown_menu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-top: none;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out;
+  transform-origin: top center;
+}
+
+/*Estos son los diferentes items que contiene el menu desplegable*/
+.dropdown_menu li {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  padding: 8px 0;
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: all 200ms ease-in-out;
+}
+/*Cada item del menu desplegable tiene una animacion en :hover, para resaltar cual es el elemento
+sobre el cual esta el cursor*/
+.dropdown_menu li:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+
+/*El ultimo hijo de la clase ".dropdown_menu" no tendra borde abajo, esto debido que ".dropdown_menu"
+ya tiene un borde*/
+.dropdown_menu li:not(:last-child) {
+  border-bottom: solid 1px black;
+}

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(230, 230, 230);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.component_big {
+  grid-column: 1 / 3;
+  background-color: rgb(240, 240, 240);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.component_big > h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(71, 201, 169);
+}
+
+.component_big > span {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  opacity: 0.5;
+  margin: 8px 0 16px 0;
+}
+
+.component_big > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
+
+.component_small_left {
+  background-color: rgb(71, 201, 169);
+  padding: 16px;
+}
+
+.component_small_left > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+}
+
+.component_small_left > div {
+  margin: 12px 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.component_small_left > div > strong {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+  line-height: calc(24px * 1.2);
+}
+
+.component_small_left > div > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(240, 240, 240);
+  opacity: 0.75;
+}
+
+.component_small_left > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(240, 240, 240);
+  margin-bottom: 18px;
+}
+
+.component_small_left > button {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: rgb(240, 240, 240);
+  outline: none;
+  border: 1px solid rgb(240, 240, 240);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.component_small_left > button:hover {
+  color: rgb(71, 201, 169);
+  background-color: rgb(240, 240, 240);
+}
+
+.component_small_right {
+  background-color: rgb(77, 216, 181);
+  padding: 16px;
+}
+
+.component_small_right > h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(240, 240, 240);
+}
+
+.component_small_right > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(240, 240, 240);
+  margin-top: 8px;
+}
