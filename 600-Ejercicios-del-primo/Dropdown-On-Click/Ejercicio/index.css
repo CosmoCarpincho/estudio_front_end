@@ -40,63 +40,47 @@
   el porque de todos los estilos importantes.
   */
 
+.navigator input[type="checkbox"] {
+  display: none;
+}
+
 .dropdown {
-  position: relative;
-  list-style: none;
+  /* background-color: red; */
 }
 
-.dropdown > li:first-child {
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  padding: 8px 16px;
+.dropdown > li {
+  /* background-color: blue; */
+  padding: 10px;
   border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dropdown > input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.dropdown > input:checked + .dropdown_menu {
-  transform: scale(1);
+.dropdown,
+.dropdown_menu {
+  list-style: none;
 }
 
 .dropdown_menu {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: auto;
-  background-color: whitesmoke;
-  border: 1px solid black;
-  border-top: none;
-  transform: scale(0);
-  transition: transform 200ms ease-in-out;
-  transform-origin: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* transform: scale(0); */
 }
 
 .dropdown_menu li {
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
+  transition: background-color 0.7s;
+  /* transition: color 2s; */
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   text-align: center;
-  padding: 8px 0;
-  cursor: pointer;
-  background-color: whitesmoke;
-  transition: all 200ms ease-in-out;
 }
 
 .dropdown_menu li:hover {
-  color: whitesmoke;
   background-color: black;
-}
-
-.dropdown_menu li:not(:last-child) {
-  border-bottom: solid 1px black;
+  color: white;
 }
